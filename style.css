@@ -1,0 +1,271 @@
+  
+html, body{
+    font-size: 16px;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+/* Header */
+
+header{
+    background-color: #AD6C1C;
+    /* pentru ca sa nu fie spatiu intre header si body, setam position relative,
+    apoi top cu val negativa(trece peste body), apoi z-index care specifica 
+    ca copilul este peste parent pozitionat*/
+    position: relative;
+    top: -1rem;
+    z-index: 1;
+}
+
+.header h1{
+    text-align: center;
+    font-size: 5rem;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+ h1 span{
+    color: #0A78AD;
+}
+
+.header{
+    padding-top: 2rem;
+}
+header ul{
+    display: flex;
+    /*la ecran mai mic, "li" se muta pe urmatoarea linie, nu se suprapun*/
+    flex-wrap: wrap;
+    /*spatiu egal intre elemente*/
+    justify-content: space-around;
+    padding-bottom: 2.5rem;
+    /*sa nu mai apara bulina la fiecare li*/
+    list-style-type: none;
+}
+
+a{
+  font-size: 1.8rem;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+
+}
+
+/* About us Section*/
+
+.banner p{
+    font-size: 2rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #AD6C1C;
+    line-height: 5rem;
+    font-weight: bold;
+    position: relative;
+    top: 300px;
+}
+
+.banner {
+    background-image: url("https://images.unsplash.com/photo-1681622341251-4fbbff1c27c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+   /*am stabilit height, altfel avea cat ocupa p din container*/  
+    height: 800px;
+
+}
+
+div .baner{
+    margin-top: 0;
+}
+
+/*la ecrane mai mici decat tablete, scrisul de la h1 ,p, a vor aparea mai mici*/
+@media only screen and (max-width: 760px) {
+    .banner p {
+        font-size: 1rem;
+      }
+    .header h1{
+        font-size: 2.5rem;
+    }
+
+    a{
+        font-size: 1rem;
+    }
+}
+
+/*Our Portfolio Section*/
+
+.our-portofolio{
+    background-color: #AD6C1C;
+}
+
+/*h2, ul */
+.intro-portfolio, .team {
+    color:#000000;
+    
+}
+
+.intro-portfolio  h2{
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.intro-portfolio ul{
+    padding-bottom: 1rem;
+    list-style-type: none;
+
+} 
+
+.intro-portfolio li{
+    display: inline-block;
+    margin-right: 1rem;
+}
+.intro-portfolio a{
+    font-size: 1.5rem;
+    color:#ffffff;
+    letter-spacing: 2px;
+  
+}
+
+/*include cele 4 category */
+.w-category{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* de sus in jos sunt in centru*/
+  align-items: center;
+
+}
+
+/*Women */
+.category{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    padding: 1rem;
+
+}
+
+/*Men */
+#men{
+    justify-content: center;
+}
+
+
+.category p{
+    color: #ffffff;
+    font-size: 1.2rem;
+    word-spacing: 2px;
+    font-weight: bold;
+}
+.category img{
+   width: 200px;
+   height: 180px;
+   padding: 1rem;
+}
+
+.category span{
+    color: #0A78AD;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width:760px){
+    .intro-portfolio h2{
+        font-size: 1rem;
+    }
+
+    .intro-portfolio a{
+        font-size: 1rem;
+    }
+
+    .category p{
+        font-size: 1rem;
+    }
+}
+
+/* Our-Team section*/
+
+.team h2{
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.team {
+    background-image: url("https://images.unsplash.com/photo-1628871068231-2a09ab2136b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=875&q=80");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.team h3{
+    color:#000000;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+.team p{
+    color:#000000;
+    letter-spacing: 2px;
+    font-size: 1.2rem ;
+    padding-right: 1rem;
+}
+.team-photos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.member img{
+   width: 200px;    
+   height: 250px;
+   padding: 1rem;
+}
+
+.member p{
+    font-weight: bold;
+    padding-top: 0.4rem;
+}
+
+@media only screen and (max-width:760px){
+    .team h2{
+        font-size: 1rem;
+    }
+
+    .member h3{
+        font-size: 1rem;
+    }
+
+    .member p{
+        font-size: 1rem;
+
+    }
+}
+
+footer{
+    background-color: #AD6C1C;
+    color: #ffffff;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+}
+footer h2{
+    line-height: 2rem;
+}
+
+footer p{
+    font-size: 1rem;
+    font-weight:bold ;
+    line-height: 1rem;
+}
+
+footer span{
+    color: #0A78AD;
+}
+
+#phone-nb{
+  margin-left: 2rem;
+}
