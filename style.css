@@ -11,9 +11,6 @@ body{
 
 header{
     background-color: #AD6C1C;
-    /* pentru ca sa nu fie spatiu intre header si body, setam position relative,
-    apoi top cu val negativa(trece peste body), apoi z-index care specifica 
-    ca copilul este peste parent pozitionat*/
     position: relative;
     top: -1rem;
     z-index: 1;
@@ -35,12 +32,9 @@ header{
 }
 header ul{
     display: flex;
-    /*la ecran mai mic, "li" se muta pe urmatoarea linie, nu se suprapun*/
     flex-wrap: wrap;
-    /*spatiu egal intre elemente*/
     justify-content: space-around;
     padding-bottom: 2.5rem;
-    /*sa nu mai apara bulina la fiecare li*/
     list-style-type: none;
 }
 
@@ -70,7 +64,6 @@ a{
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-   /*am stabilit height, altfel avea cat ocupa p din container*/  
     height: 800px;
 
 }
@@ -79,7 +72,6 @@ div .baner{
     margin-top: 0;
 }
 
-/*la ecrane mai mici decat tablete, scrisul de la h1 ,p, a vor aparea mai mici*/
 @media only screen and (max-width: 760px) {
     .banner p {
         font-size: 1rem;
@@ -99,7 +91,7 @@ div .baner{
     background-color: #AD6C1C;
 }
 
-/*h2, ul */
+
 .intro-portfolio, .team {
     color:#000000;
     
@@ -128,12 +120,11 @@ div .baner{
   
 }
 
-/*include cele 4 category */
+
 .w-category{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* de sus in jos sunt in centru*/
   align-items: center;
 
 }
@@ -244,6 +235,8 @@ div .baner{
 
     }
 }
+
+/* Footer */
 
 footer{
     background-color: #AD6C1C;
