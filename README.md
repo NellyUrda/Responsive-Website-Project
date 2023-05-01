@@ -1,7 +1,7 @@
 # Responsive-Website-Project
 This is the homepage for an imaginary Company (getComfy). 
 It is a static, responsive website. I used Flexbox, Media Queries , Relative Measurements to accomplish this.
-For web design part, I used Complelemtary Color scheme.
+For Web Design part, I used Complementary Color scheme.
 
 The website on big screens
 
